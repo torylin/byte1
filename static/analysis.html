@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+    <title>Cover Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/cover.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand"></h3>
+              <nav>
+                <ul class="nav masthead-nav">
+                  <li><a href="home.html">Home</a></li>
+                  <li class="active"><a href="analysis.html">Analysis</a></li>
+                  <li><a href="futurework.html">Future Work</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+
+          <div class="inner cover">
+            <br></br>
+            <br></br>
+            <h1 class="cover-heading">Visualizing the SAT</h1>
+            <br>
+            <p>Rather helpfully, it turns out that the state of Connecticut publishes data on the participation and 
+            performance of the students at each of its high schools on the SAT. Using the 
+            <a href="https://catalog.data.gov/dataset/sat-school-participation-and-performance-2012-2013">SAT School
+            Participation and Performance</a> dataset in concert with Google Fusion Tables, we were able to map each
+            Connecticut high school and color-code them by the proportion of students who scored a 1550 (out of 2400) 
+            or above, which the state considers to be an indicator of college and career readiness.</p>
+            <br>
+            <iframe width="700" height="500" scrolling="no" frameborder="no" src="https://fusiontables.google.com/embedviz?q=select+col2+from+13l_FQPCHHXU-khaVIkPhi1BUPodEaYx-Gc6PFQyq&amp;viz=MAP&amp;h=false&amp;lat=41.58964636003264&amp;lng=-72.42470811239048&amp;t=1&amp;z=8&amp;l=col2&amp;y=2&amp;tmplt=3&amp;hml=GEOCODABLE"></iframe>
+            <br></br>
+            <p>We then obtained <a href="https://en.wikipedia.org/wiki/List_of_Connecticut_locations_by_per_capita_income">
+            income statistics</a> for (almost) each county subdivision in Connecticut by scraping 
+            Wikipedia. By combining this dataset with <a href="http://magic.lib.uconn.edu/connecticut_data.html">
+            geographical boundary data</a> from the University of Connecticut, we were able to again use Google Fusion
+            Tables to color-code the county subdivisions of Connecticut by their median family income.</p>
+            <br></br>
+            <iframe width="700" height="500" scrolling="no" frameborder="no" src="https://fusiontables.google.com/embedviz?q=select+col2%3E%3E1+from+169N4F09N_fjXsNsaCpX1fv1B-N9v4vZHROUxNkbK&amp;viz=MAP&amp;h=false&amp;lat=41.635909487333095&amp;lng=-72.38579191416727&amp;t=1&amp;z=8&amp;l=col2%3E%3E1&amp;y=2&amp;tmplt=2&amp;hml=KML"></iframe>
+          	<br></br>
+          	We created an overlay of the two (as a static image, because our knowledge of how to use Google Fusion Tables
+          	only goes so far).
+          	<br></br>
+          	<img width="700" src="overlay.png" alt="Italian Trulli">
+          	<br></br>
+          	<p>From this overlay, we're able to observe that at least to the human eye, the pockets of poorest performance on
+          	the SAT do seem to cluster within the county subdivisions in the lowest socioeconomic bracket; likewise, the
+          	schools with the highest performance on the SAT are all located within the two wealthiest county subdivisions,
+          	which report median family incomes in excess of $200,000 a year.</p>
+          	<p>Although the trend is easiest to observe in the poorest and richest populations, the relationship between
+          	socioeconomic status and SAT score is noticeable in the middle groups as well. A couple of interesting observations:
+          	only three schools where more than 60% of students scored 1550 or above were located in county subdivisions with median family
+          	incomes under $100,000 a year; and not a single school in a county subdivision with a median family income over
+          	$100,000 a year had fewer than 40% of its students score 1550 or above.</p>
+          	<br></br>
+          	<br></br>
+          </div>
+
+          <div class="mastfoot">
+            <div class="inner">
+              <p>Cover template for <a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+</html>
+

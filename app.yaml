@@ -15,6 +15,9 @@ handlers:
 - url: /favicon\.ico
   static_files: favicon.ico
   upload: favicon\.ico
+- url: /overlay.png
+  static_files: images/overlay.png
+  upload: images/overlay.png
 - url: /js
   static_dir: js
   application_readable: true
@@ -27,6 +30,15 @@ handlers:
 - url: /templates
   static_dir: templates
   application_readable: true
+- url: /home.html
+  static_files: static/home.html
+  upload: static/home.html
+- url: /analysis.html
+  static_files: static/analysis.html
+  upload: static/analysis.html
+- url: /futurework.html
+  static_files: static/futurework.html
+  upload: static/futurework.html
 
 
 # This handler tells app engine how to route requests to a WSGI application.
